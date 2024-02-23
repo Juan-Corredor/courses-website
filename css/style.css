@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13pt;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+body {
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+ul {
+    width: 100%;
+    padding-left: 18px;
+}
+
+li {
+    margin-top: 1%;
+}
+
+.style_button_navegation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2cm;
+}
+
+.button_indice {
+    font-size: 16px;
+    border: #000 solid 1px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.button_indice i {
+    font-size: 18px;
+    color: #000;
+}
+
+.button_indice:hover {
+    background-color: #017dc7;
+    border: #017dc7 solid 1px;
+}
+
+.button_indice:hover i {
+    color: #fff;
+}
+
+.div-carga {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*******************************************************ESTILOS GENERICOS PARA ARTICLES Y SECTIONS******************************************************************************/
+.generic_article {
+    width: 100%;
+    padding: 1.5cm 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.generic_section,
+.information_blocks_div_internal {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_direction_column {
+    flex-direction: column;
+}
+
+/*******************************************************ESTILOS PARA FONDOS CON IMAGENES******************************************************************************/
+.article_background_img_1 {
+    background: url(../resource/fondo-1.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.article_background_img_2 {
+    position: relative;
+    background-image: url(../resource/fondo-3.png);
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 75%;
+    padding-bottom: 0.5cm;
+}
+
+.article_background_img_2::after {
+    background: url(../resource/separador-3.svg) no-repeat;
+    background-size: cover;
+    bottom: -7vw;
+    content: "";
+    left: 0;
+    margin-left: -1%;
+    min-height: 7.7vw;
+    position: absolute;
+    width: 101%;
+}
+
+.article_background_img_3 {
+    background: url(../resource/fondo-6.png) no-repeat;
+    background-position: right bottom;
+    background-size: 45%;
+}
+
+.article_background_img_4 {
+    background: url(../resource/fondo-2.png) no-repeat;
+    background-size: 100%;
+    padding: 0;
+}
+
+.article_background_img_5 {
+    background: url(../resource/fondo-3.jpg) no-repeat;
+    background-size: 100%;
+    padding: 0;
+}
+
+/******************************************************************************SECCION DE REFERENCIA******************************************************************************/
+#article-reference-placeholder {
+    position: relative;
+    color: #000;
+}
+
+#article-reference-placeholder::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background: url(../resource/separador-1.svg) no-repeat center center;
+    top: -3.7vw;
+    min-height: 7.5vw;
+    background-size: cover;
+}
+
+#section-reference {
+    color: #fff;
+    background-color: #018ad0;
+    justify-content: space-between !important;
+    padding: 0 10px;
+    height: 4em;
+}
+
+.reference_btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.reference_btn:hover {
+    background-color: #018ad0;
+    color: #fff;
+}
+
+.reference_btn:nth-child(1) {
+    margin-right: 15px;
+}
+
+
+/******************************************************************************SECCION DE ÍNDICE******************************************************************************/
+#article_navigation_index_horizontal {
+    padding-bottom: 0;
+    width: -webkit-fill-available;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+#section_navigation_index_horizontal {
+    position: relative;
+    top: 0;
+    border-bottom: solid 3px #017dc7;
+    justify-content: space-around;
+}
+
+#section_navigation_index_horizontal a {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1.5cm;
+}
+
+#section_1 {
+    display: none !important;
+}
+
+.fixed_nav {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.36);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.fixed_nav #section_1 {
+    display: flex !important;
+    width: 40% !important;
+    font-size: 50pt !important;
+}
+
+.fixed_nav .section_navigation_index_horizontal {
+    width: 95% !important;
+}
+
+.fixed_nav #section_1 i {
+    font-size: 15pt !important;
+}
+
+.fixed_nav #section_navigation_index_horizontal {
+    width: 95% !important;
+    border-bottom: none;
+}
+
+.active-link {
+    color: #0090e4 !important;
+    border-bottom: 3px solid #0090e4;
+}
+
+#section_navigation_index_horizontal a:hover,
+.fixed_nav a:hover {
+    color: #fff !important;
+    background-color: #0090e4;
+}
+
+
+/* VERSION 1 */
+/* #menu-indice {
+    padding: 1cm 0;
+}
+
+#section-indices {
+    flex-direction: column;
+}
+
+.a_enlaces {
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    border-bottom: #0000003f solid 0.5px;
+    color: #000;
+    padding-top: 35px;
+    transition: 0.3s;
+}
+
+.a_enlaces:hover {
+    border-bottom: #018ad0 solid 0.5px;
+    color: #018ad0;
+} */
+
+
+/*******************************************************Estilos para la barra de desplazamiento*******************************************************/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Estilo del pulgar (la barra que se desplaza) */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Estilo del track (la pista por donde se desplaza la barra) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f100;
+
+}
+
+/*******************************************************ESTILOS DE TARGETAS******************************************************************************/
+.style_card_class {
+    position: relative;
+    border-radius: 15px;
+    background-color: #ffffffab;
+    box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.192);
+}
+
+.style_card_class::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    border-top: solid 12px transparent;
+    border-image: linear-gradient(to right, #017dc7, #09979e) 1;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/*******************************************************ESTILOS CEPARADORES******************************************************************************/
+.border_uniquindio_article,
+.border_uniquindio {
+    border-start-start-radius: 15px;
+    border-start-end-radius: 15px;
+    width: 70%;
+    height: 9px;
+    background: url(../resource/border-uniquindio.webp) no-repeat !important;
+    background-size: cover !important;
+}
+
+.border_uniquindio_article {
+    width: 100%;
+    height: 2px;
+}
+
+.border-footer {
+    height: 8px;
+    margin: 0;
+}
+
+/*******************************************************ESTILOS GENERICOS PARA TEXTOS******************************************************************************/
+.black_highlighted_text,
+.highlighted_text {
+    font-size: 25pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.sub_title {
+    font-size: 19pt !important;
+}
+
+.black_highlighted_text {
+    color: #000;
+}
+
+
+.highlighted_text {
+    color: #018ad0;
+}
+
+.text_motivational {
+    font-weight: bold;
+    margin-bottom: 0%;
+    padding: 2% 0 0 0px !important;
+    text-align: center;
+}
+
+
+
+/*********************************************************ESTILOS BANNERS DE INFORMACION****************************************************************/
+/* #region */
+.information_blocks {
+    width: 100%;
+    height: auto;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.information_blocks_div_internal {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#information_block_links {
+    padding: 20px;
+}
+
+.cards_info_internal {
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+}
+
+.information_blocks .generic_image_styles {
+    width: 55px;
+}
+
+.generic_article.article_with_image {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+#banner_background_img_styles_1 {
+    background-image: url(../resource/img-informacion/img-info-diplomado4.jpg);
+}
+
+#banner_background_img_styles_2 {
+    background-image: url(../resource/img-informacion/img-info-diplomado2.jpg);
+}
+/*#endregion*/
+
+/*******************************************************ESTILOS PARA CONTENEDORES CON DOS COLUMNAS******************************************************************************/
+/* #region */
+.two_column_subsection {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.two_column_subsection:nth-child(1) {
+    margin-right: 2%;
+}
+/*#endregion*/
+
+/*******************************************************ESTILOS PARA IMAGENES******************************************************************************/
+.generic_image_styles {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    /* ajusta según necesidad */
+    object-fit: cover;
+}
+
+/*******************************************************ESTILOS PARA ICONO EN SVG******************************************************************************/
+/* #region */
+#icon_sinfoci {
+    width: 85%;
+    transition: fill 0.3s ease;
+    /* Agrega una transición para suavizar el cambio de color */
+}
+
+#section_1:hover #icon_sinfoci,
+#section_1:hover .cls-1,
+#section_1:hover .cls-2 {
+    fill: #fff !important; /* Cambia el color de relleno a blanco en hover */
+}
+
+.cls-1 {
+    fill: #282829;
+}
+
+.cls-2 {
+    fill: #224390;
+}
+/*#endregion*/
+
+
+/* #region ESTILOS PIE DE PÁGINA***********************************************************************/
+footer {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    background-color: rgba(40, 40, 41, 1);
+    color: #fff;
+}
+
+.footer_subsection_div .generic_image_styles {
+    width: 90%;
+}
+
+.footer_subsection_div {
+    width: 20%;
+}
+
+.footer_subsection_div:nth-child(2) {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container_links_footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#container_links_list_header a:hover,
+#container_links_footer a:hover {
+    font-size: 18px;
+    color: #0090e4;
+}
+
+#container_info_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#container_info_center span { 
+    padding: 5px;   
+    font-size: 10pt;
+    margin-top: 2%;
+}
+
+#container_social_networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#container_social_networks a {
+    padding: 5px;
+}
+/*#endregion*/
+
+@media screen and (max-width: 1366px) {
+    #banner_class,
+    .border_uniquindio_article {
+        width: 100%; 
+    }
+    .border_uniquindio,
+    .information_blocks_div_internal,
+    .generic_section{
+        width: 80%;    
+    }
+}
+
+@media screen and (max-width: 855px) {
+    .generic_section{
+        flex-direction: column;
+        width: 100%;    
+    }
+
+    .subsection_dynamic_columns {
+        text-align: left;
+    }
+
+    #banner_class,
+    .information_blocks_div_internal, 
+    .border_uniquindio_article {
+        width: 100%; 
+    }
+
+    .information_blocks_div_internal {
+        padding: 15px 10px;
+    }
+    
+ 
+    .border_uniquindio,    
+    .generic_section{
+        width: 85%;    
+    }
+
+    .introduction_div_internal {
+        width: 100% !important;
+    }
+
+    #section_navigation_index_horizontal a {
+        justify-content: left;
+    }
+
+    .footer_subsection_div:nth-child(2){
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    #container_info_center {
+        flex-direction: column;
+    }
+
+    .footer_subsection_div {
+        width: 35%;
+    }
+
+    .two_column_subsection:nth-child(1) {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+

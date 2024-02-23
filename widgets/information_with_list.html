@@ -1,0 +1,13 @@
+<article class="generic_article">
+    <section class="generic_section section_direction_column">
+        <h3 class="black_highlighted_text">{{title}} <span class="highlighted_text">{{highlighted_title}}</span></h3>
+        <p> {{description}} </p>
+       
+        <ul>
+            {{#each goal_list}}
+            <li><strong>{{title_item}}</strong> {{item}}</li>
+            {{/each}}
+        </ul>        
+    </section>
+</article>
+

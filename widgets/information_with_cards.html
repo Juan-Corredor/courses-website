@@ -1,0 +1,17 @@
+<article class="generic_article">
+    <section class="generic_section section_direction_column" id="section_with_cards">
+        <h3 class="black_highlighted_text">{{title}}<span class="highlighted_text">{{highlighted_title}}</span></h3>
+        
+        <p>{{opening_text}}</p>
+
+        <div class="subsection_with_cards">
+            {{#each list_card_data }}
+                <div class="div_subsection_with_cards style_card_class">
+                    <img class="generic_image_styles" src="{{src_img}}" alt="Imagen de la tarjeta" />
+                    <h4 class="black_highlighted_text">{{name}} <span class="highlighted_text">{{highlighted_name}}</span></h4>
+                    <p>{{description}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+</article>

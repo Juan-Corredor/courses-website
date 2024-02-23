@@ -1,0 +1,22 @@
+<article class="generic_article article_with_image" id="{{id}}">
+    <section class="generic_section information_blocks" id='banner_class'>
+        <div class="information_blocks_div_internal">
+            {{#if banner_information_block_list}}
+            {{#each banner_information_block_list}}
+                <div class="cards_info_internal">
+                    <img class="generic_image_styles" src="{{banner_img_path}}" alt="img de información">
+                    <h4 class="texts_highlighted">{{banner_title}}</h4>
+                    <span>{{banner_text}}</span>
+                </div>
+            {{/each}}
+            {{else}}
+                <span><strong>{{bold_text}}</strong> {{course_name}}</span>
+                <div id="information_block_links">
+                    {{#each banner_button_list}}
+                    <a class="reference_btn" href="{{banner_button_link}}">{{banner_button_name}}</a>
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+    </section>
+</article>

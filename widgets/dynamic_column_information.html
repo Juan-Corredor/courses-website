@@ -1,0 +1,14 @@
+<article class="generic_article ">
+    <section class="generic_section section_direction_column">
+        <h3 class="black_highlighted_text">{{title}} <span class="highlighted_text">{{highlighted_title}}</span></h3>
+        <div class="subsection_dynamic_columns">
+            {{#each list_items}}
+            <div class="dynamic_counter">
+                <h4>{{name_item}}</h4>
+                <span>{{description}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</article>
+

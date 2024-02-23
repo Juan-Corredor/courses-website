@@ -1,0 +1,9 @@
+<nav class="generic_article" id="menu-indice">
+    <div class="generic_section" id="section-indices">
+        <h3 class="black_highlighted_text">{{title}} <span class="highlighted_text">{{highlighted_title}}</span></h3>        
+        <!-- ÍNDICES DE PÁGINA -->
+        {{#each sections_site}}
+            <a class="a_enlaces" href='{{href_indice}}'>{{name_indice}}</a>
+        {{/each}}   
+    </div>
+</nav>

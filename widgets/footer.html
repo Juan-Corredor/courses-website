@@ -1,0 +1,32 @@
+<footer>
+    <div class="border_uniquindio_article border-footer"></div>
+    <div class="generic_article">
+        <section class="generic_section">
+            <div class="footer_subsection_div">
+                <img class="generic_image_styles" src="{{src_img_left}}" alt="logo" />
+            </div>
+            <div class="footer_subsection_div">
+                <h3>{{title_link_list}}</h3>
+                <div id="container_links_footer">
+                    {{#each link_list}}
+                        <a href="#">{{name_link}}</a>
+                        <span> &nbsp; {{separator}} &nbsp; </span>
+                    {{/each}}
+                </div>
+                <div id="container_info_center">
+                    <span>{{text_email}}</span>
+                    <span>{{text_telephone}}</span>
+                    <span>{{text_address}}</span>                
+                </div>
+                <div class="container_social_networks">
+                    {{#each list_social_networks}}
+                        <a href="{{href}}" target="_blank"><img src="{{src_img}}" alt="" width="40" height="40"></a>                        
+                    {{/each}}
+                </div>
+            </div>
+            <div class="footer_subsection_div">
+                <img class="generic_image_styles" src="{{src_img_rigth}}" alt="logo2 laboratorio de usabilidad" />
+            </div>
+        </section>
+    </div>
+</footer>

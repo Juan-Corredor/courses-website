@@ -1,0 +1,140 @@
+/* VIDEO-PLAYER */
+#article-video-player {
+    position: relative;
+    background-image: url(../resource/fondo-3.png);
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 75%;
+    padding-bottom: 0%;    
+}
+
+#article-video-player ::after {
+    background: url(../resource/separador-3.svg) no-repeat;
+    background-size: cover;
+    bottom: -7vw;
+    content: "";
+    left: 0;
+    margin-left: -1%;
+    min-height: 7.7vw;
+    position: absolute;
+    width: 101%;
+}
+
+.generic_section .iframe-video-player {
+    width: 100%;
+    height: 100vh;
+}
+
+/* ESTILOS SECCION DE DESCRIPCIÓN */
+#article-introduction {
+    background: url(../resource/fondo-3.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.decription-div-internal {
+    flex-wrap: nowrap;
+}
+
+.decription-div-internal:nth-child(2) {
+    height: 100%;
+    align-self: flex-start;
+    overflow: scroll;
+    overflow-y: auto !important;
+    /* Habilita el desplazamiento vertical solo cuando es necesario */
+    overflow-x: hidden;
+}
+
+.div_information_with_video {
+    width: 100%;
+    padding-bottom: 75%;
+    /*VIDEO 4:3*/
+    position: relative;
+}
+
+.div_information_with_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*******************************************************************************SECCIÓN DE ACTIVIDADES********************************************************************************/
+#section_with_cards p {
+    width: 100%;
+}
+
+.subsection_with_cards {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between;
+}
+
+.div_subsection_with_cards {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding: 30px 20px;
+    margin-top: 1cm;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.div_subsection_with_cards p {
+    padding-top: 2%;
+    border-top: 1px solid #a8a8a894;
+}
+
+.div_subsection_with_cards .generic_image_styles {
+    width: 25%;
+    margin-bottom: 5%;
+}
+
+#section_link_list  {
+    justify-content: space-between;
+    align-items: flex-start;    
+}
+
+.styles_link_column  {
+    width: 45%;
+}
+
+.styles_link_column  a {
+    color: #000;
+}
+.styles_link_column  a:hover {
+    color: #0090e4;
+}
+
+.styles_link_list li {
+    padding: 15px 0;
+}
+
+.styles_link_column  .black_highlighted_text,
+.styles_link_column  .highlighted_text,
+.introduction_div_internal .black_highlighted_text,
+.introduction_div_internal .highlighted_text,
+.div_subsection_with_cards .black_highlighted_text,
+.div_subsection_with_cards .highlighted_text {
+    font-size: 15pt;
+}
+
+@media screen and (max-width: 855px) {    
+    .styles_link_column {
+        width: 100%;
+    }
+
+    .subsection_with_cards {
+        flex-wrap: wrap;
+    }
+
+    .div_subsection_with_cards {
+        width: 100%;
+    }
+
+}

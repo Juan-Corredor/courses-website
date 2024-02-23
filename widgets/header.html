@@ -1,0 +1,18 @@
+<header id="header">
+    <div class="generic_section" id="header_main">
+        <div id="header_div_main">
+            <div class="header_div_internal">
+                <a href="{{usartetic.href}}" target="_blank">{{usartetic.name}}</a>
+            </div>
+            <div class="header_div_internal">
+                <h1> {{title}} </h1>
+            </div>
+            <nav class="header_div_internal" id="container_links_list_header">
+                {{#each link_list}}
+                    <a href="{{href}}">{{name_link}}</a>
+                    <span> &nbsp; {{separator}} &nbsp; </span>
+                {{/each}}
+            </nav>
+        </div>
+    </div>
+</header>

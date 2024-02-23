@@ -1,0 +1,33 @@
+<article class="generic_article" id="{{containerId}}">
+    <h3 class="black_highlighted_text">{{title}}<span class="highlighted_text">{{highlighted_title}}</span></h3>
+
+    <div class="border_uniquindio"></div>
+
+    <section class="generic_section section_direction_column">
+        <div class="tab">
+            {{#each tab_list}}
+                <button id="{{id_tab}}" class="tablinks {{class_tab}}" onclick="openUnits(event, '{{../containerId}}', '{{tabcontent_id}}')">{{name_tab}}</button>
+            {{/each}}
+        </div>
+        {{#each list_content_per_tab}}
+            <div class="tabcontent" id="{{id}}">
+                <span class="highlighted_text sub_title">{{name_tab}}</span>
+                <p>{{description}}</p>
+
+                {{#if topics_tab}}
+                    <ul>
+                        <li><strong>Tema 1:</strong> {{topics_tab.topic_1}}</li>
+                        <li><strong>Tema 2:</strong> {{topics_tab.topic_2}}</li>
+                        <li><strong>Tema 3:</strong> {{topics_tab.topic_3}}</li>
+                        <li><strong>Tema 4:</strong> {{topics_tab.topic_4}}</li>
+                        <li><strong>Tema 5:</strong> {{topics_tab.topic_5}}</li>
+                        <li><strong>Tema 6:</strong> {{topics_tab.topic_6}}</li>
+                    </ul>
+                {{/if}}
+                <div class="div_button">
+                    <button type="submit" class="generic_button_styles">Empezar</button>
+                </div>
+            </div>
+        {{/each}}
+    </section>
+</article>

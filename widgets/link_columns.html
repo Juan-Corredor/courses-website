@@ -1,0 +1,16 @@
+<article class="generic_article">
+    <h3 class="black_highlighted_text">{{title}}<span class="highlighted_text">{{highlighted_title}}</span></h3>
+    <section class="generic_section" id="section_link_list">
+        {{#each link_list_container}}
+            <div class="two_column_subsection styles_link_column ">
+                <h4 class="black_highlighted_text">{{name}} <span class="highlighted_text">{{highlighted_name}}</span></h4>
+                {{#each links_list}}
+                    <ul class="styles_link_list">
+                        <li>  <a href="{{href}}" target="_blank" class="a_enlaces"> {{name_link}} </a>
+                        </li>
+                    </ul>
+                {{/each}}
+            </div>
+        {{/each}}        
+    </section>
+</article>

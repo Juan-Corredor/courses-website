@@ -1,0 +1,361 @@
+/******************************************************************************ESTILOS CABECERA******************************************************************************/
+#header {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 15cm;
+    background-image: url(../resource/img-informacion/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+#header_main {
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(216, 216, 216, 0.267);
+}
+
+#header_div_main {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header_div_internal {
+    font-size: 11pt;
+    width: 100%;
+    padding: 15px 0px;
+    text-align: start;
+}
+
+.header_div_internal a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+/* se le aplica estilos a el segundo elemento con esta clase */
+.header_div_internal:nth-child(2) {
+    text-align: center;
+    border: none;
+    border-bottom: #018ad0 solid 8px;
+    border-top: #018ad0 solid 8px;
+    padding: 50px 0px;
+}
+
+.header_div_internal:nth-child(2) h1 {
+    font-size: 45pt;
+}
+
+.header_div_internal:nth-child(3) {
+    text-align: end;
+}
+
+/*****************************************************************************SECCION DE INTRODUCCIÓN******************************************************************************/
+.introduction_div_internal:nth-child(1) {
+    width: 45%;
+}
+
+.introduction_div_internal:nth-child(2) {
+    width: 55%;
+}
+
+/********************************************************************** SECCIÓN DE INFORMACIÓN DEL CERTIFICADO Y SECCIÓN DE ACERCA DEL CERTIFICADO********************************************************************* */
+#section_card_vertical {
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+    background-color: #ffffff80;
+    box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.192);     
+}
+
+.div_internal_card_vertical:nth-child(1) {
+    width: 25%;
+}
+
+.div_internal_card_vertical:nth-child(2) {
+    padding: 2% 2%;
+    width: 70%;
+}
+
+.div_internal_card_vertical:nth-child(2) a {
+    color: #018ad0;
+}
+.div_internal_card_vertical:nth-child(2) a:hover {
+    color: #d06501;
+}
+
+/**************************************************************************ESTILOS GENERICOS PARA LOS BOTONES**************************************************************************/
+.div_button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0%;
+    margin-top: 2%;
+}
+
+.div_button .generic_button_styles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background-color: transparent;
+    color: #018ad0;
+    border: 0.2px solid #018ad0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 1% 2%;
+    margin: 0 5px;
+}
+
+.div_button .generic_button_styles:hover {
+    background-color: #018ad0;
+    color: #fff !important;
+}
+
+/**************************************************************************SECCION DE INTERESADOS**************************************************************************/
+
+
+/**************************************************************************SECCION CONTENIDO DEL CURSO**************************************************************************/
+#article_page_tab  {
+    padding-top: 3cm;    
+}
+
+.tab {
+    width: 100%;
+    overflow: hidden;
+    border-top: none !important;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: #0000001f;
+}
+
+.tab button.active {
+    color: #fff;
+    background-color: #018ad0;
+}
+
+.tabcontent {
+    background-color: #ffffff8a;
+    display: none;
+    padding: 30px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    border-top: none !important;
+    border: #ccc solid 1px;
+    box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.267);
+    border-end-start-radius: 15px;
+    border-end-end-radius: 15px;
+}
+
+.tabcontent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*************************************************************************SECCION EQUIPO DE TRABAJO*************************************************************************/
+.subsection_dynamic_columns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dynamic_counter {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+/************************************************* SECCION DE TESTIMONIOS *************************************************/
+#section_carousel {
+    position: relative;    
+}
+
+.carousel {
+    width: 100%; /* Asegúrate de que el contenedor del carrusel tenga el ancho completo */
+    margin: 0 auto; /* Centra el carrusel */
+    overflow: hidden;
+    position: relative;    
+}
+
+.card_carousel {
+    display: flex;
+    padding-bottom: 1%;
+    transition: transform 0.5s ease;
+}
+
+.carrusel_control {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+    background-color: #018bd050;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 25pt;
+    border-radius: 25px;
+}
+
+.carrusel_control:hover {
+    background-color: #fff;
+    color: #018ad0;
+    border: 1px solid #018ad0;
+}
+
+.carrusel_control.left {
+    left: -55px;
+}
+
+.carrusel_control.right {
+    right: -55px;
+}
+
+.element_carousel {    
+    width: calc(100% + 16px); 
+    display: flex;
+    flex: 0 0 calc(33.33% - 16px); /* Resta el doble del margen lateral de cada elemento */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    margin: 0 8px;
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho y alto */      
+    box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.342);
+}
+
+.element_carousel:nth-child(1).style_card_class::before {
+    border-image: linear-gradient(to right, #ec9756, #f23c27) 1;
+}
+
+.element_carousel:nth-child(3).style_card_class::before {    
+    border-image: linear-gradient(to right, #eed500, #ffad00) 1;
+}
+
+.element_carousel:nth-child(4).style_card_class::before {        
+    border-image: linear-gradient(to right, #1aac3f, #60acaa) 1;
+}
+
+.div_description_carousel {
+    margin-top: 20px;
+    padding-top: 1%;
+    border-top: 1px solid #999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_description_carousel .generic_image_styles {
+    width: 50%;
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 1300px) {
+    .element_carousel {    
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+
+@media screen and (max-width: 855px) { 
+    #header {
+        height: 15cm;
+    }
+
+    #header_div_main {
+        width: 85%;
+    }
+    
+    .header_div_internal:nth-child(2) h1 {
+        font-size: 35pt;
+    }
+
+    .carrusel_control {
+        width: 40px;
+        height: 40px;        
+        top: 55%;        
+    }
+    
+    .carrusel_control:hover {
+        background-color: #fff;
+        color: #018ad0;
+        border: 1px solid #018ad0;
+    }
+
+    
+    .element_carousel {    
+        flex: 0 0 calc(100% - 16px);
+    }    
+
+    .carrusel_control.left {
+        left: -35px;
+    }
+    
+    .carrusel_control.right {
+        right: -35px;
+    }
+
+    .div_internal_card_vertical:nth-child(1) {
+        width: 30%;
+    }
+    .div_internal_card_vertical:nth-child(2) {
+        width: 95%;        
+    }
+
+    .div_button {
+        margin: 5% 0;
+    }
+    .tabcontent {
+        text-align: left;
+    }
+
+    .tabcontent ul {
+        padding: 15px 0;
+    }
+}

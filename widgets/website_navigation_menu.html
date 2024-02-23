@@ -1,0 +1,26 @@
+<div id="overlay" class="overlay"></div>
+<div id="hover_submenu">
+    <span id="{{button_nav.id_button}}" style='top: {{button_nav.top}}; background-color: {{button_nav.background_color}}; width: {{button_nav.width}}; left: {{button_nav.left}};'>
+        {{button_nav.name_button}} <i class="{{button_nav.class_icon_button}}"></i>
+    </span>
+</div>
+
+<nav class="menu_side" id="{{id_nav}}" style='background: {{menu_side_color}}'>
+    <div class="img_page">
+        <img class="generic_image_styles" src="../resource/logo-sinfoci.svg" alt="laboratorio-usabilidad" width="150">
+    </div>
+
+    <div class="options_menu">
+        {{#each list_nav}}
+        <a href="{{href_option_menu}}" id="{{id_option_menu}}" target="{{target}}">
+            <div class="option">
+                <i class="{{class_icon_option_menu}}" title="{{name_option_menu}}"></i>
+                <h4>{{name_option_menu}}</h4>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    <div class="div_close_btn">
+        <a class="close_btn" href="#/">Cerrar</a>
+    </div>
+</nav>
